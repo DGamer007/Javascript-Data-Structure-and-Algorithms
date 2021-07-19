@@ -22,6 +22,8 @@ const sumZero = (data) => {
     }
 }
 
-const sortedArray = [-4, -3, -2, 0, 1, 4, 5, 10]
+const sortedArray1 = [-4, -3, -2, 0, 1, 5, 10]
+const sortedArray2 = [-3, -2, -1, 0, 2, 3, 4, 5, 6, 7]
 
-console.log(sumZero(sortedArray))
+console.log(sumZero(sortedArray1))   // undefined
+console.log(sumZero(sortedArray2))  // [-3,3]
