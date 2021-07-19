@@ -1,8 +1,6 @@
-// Approach-1 is Frequency Counting but we cannot solve each and every Problem using this Approach
+// Approach-1 is Frequency Counting
 
-// For now, Let's understand the Problem...
-// Anagram Checker
-// In this problem we are supposed to check whether given 2 strings are anagrams of each other or not.
+// Problem Statement: A program that can check whether the given 2 strings are anagrams of each other or not.
 
 const validAnagram = (str1, str2) => {
 
