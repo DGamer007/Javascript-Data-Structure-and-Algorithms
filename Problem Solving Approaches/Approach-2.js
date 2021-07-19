@@ -27,3 +27,31 @@ const sortedArray2 = [-3, -2, -1, 0, 2, 3, 4, 5, 6, 7]
 
 console.log(sumZero(sortedArray1))   // undefined
 console.log(sumZero(sortedArray2))  // [-3,3]
+
+// Problem Statement: A Program that can filter out only unique values in sorted Array
+
+const countUniqueValues = (data) => {
+    if (data.length === 0) return 0
+
+    let i = 0
+    let j = 1
+
+    while (j < data.length) {
+        // If data[i] is equal to data[j] then we will increment j by 1
+        if (data[i] == data[j]) {
+            j++
+            // If data[i] is not equal to data[j] then we will first increment i by 1 and then assign data[j] to it
+        } else if (data[i] !== data[j]) {
+            data[++i] = data[j]
+        }
+    }
+
+    // Finally we will return value of total Unique Numbers
+    return i + 1
+}
+
+const sortedArray3 = [1, 1, 2, 3, 3, 4, 5, 6, 6, 7]
+const sortedArray4 = []
+
+console.log(countUniqueValues(sortedArray3))    // 7
+console.log(countUniqueValues(sortedArray4))    // 0
