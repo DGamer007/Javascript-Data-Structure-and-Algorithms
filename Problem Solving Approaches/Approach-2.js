@@ -37,13 +37,10 @@ const countUniqueValues = (data) => {
     let j = 1
 
     while (j < data.length) {
-        // If data[i] is equal to data[j] then we will increment j by 1
-        if (data[i] == data[j]) {
-            j++
-            // If data[i] is not equal to data[j] then we will first increment i by 1 and then assign data[j] to it
-        } else if (data[i] !== data[j]) {
+        // If data[i] is not equal to data[j] then we will first increment i by 1 and then assign data[j] to it
+        if (data[i] !== data[j])
             data[++i] = data[j]
-        }
+        j++
     }
 
     // Finally we will return value of total Unique Numbers
