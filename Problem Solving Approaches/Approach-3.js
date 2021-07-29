@@ -14,11 +14,13 @@ function maxSubArraySum(arr, num) {
         maxSum += arr[i]
 
     let tempSum = maxSum
-    for (let i = 1; i < arr.length; i++) {
-        // To get the value of next SubArray we will
-        // add the next value in Previous SubArray Sum
-        // and remove previous value from Previous SubArray Sum
-        tempSum = tempSum - arr[i - 1] + arr[i + num - 1];
+    for (let i = num; i < arr.length; i++) {
+        /* 
+            To get the sum of current subArray we will
+            add last element of current subArray to sum of previous subArray
+            and subtract last element of previous subArray from it
+        */
+        tempSum = tempSum + arr[i] - arr[i - num];
 
         // If tempSum is greater than MaxSum then we will assign tempSum to MaxSum
         if (tempSum > maxSum)
