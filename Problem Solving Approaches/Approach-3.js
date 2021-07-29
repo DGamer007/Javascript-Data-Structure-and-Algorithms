@@ -30,4 +30,4 @@ function maxSubArraySum(arr, num) {
 
 const data = [1, 2, 1, 1, 1, 1, 1, 1, 1, 1]
 
-console.log(maxSubArraySum(data, 3))
+console.log(maxSubArraySum(data, 3))    // 4
